@@ -1,0 +1,21 @@
+{if $incl}
+<link rel="stylesheet" type="text/css" href="/autoSuggest/autoSuggest.css" />
+<script type="text/javascript" src="/autoSuggest/jquery.autoSuggest.edit.js"></script>
+{/if}
+<script type="text/javascript">
+//<![CDATA[
+$(function(){
+   $("#" + {$htmlId}).autoSuggest({$data}, {
+      selectedItemProp: 'title',
+      searchObjProps: 'title',
+      asHtmlID: {$htmlId},
+      preFill: {$preFill},
+      startText: {$startText}, 
+      emptyText: {$emptyText},
+      limitText: {$limitText},
+      selectionLimit: {$selectionLimit},
+      matchCase: {$matchCase}
+   });
+});
+//]]>
+</script>
